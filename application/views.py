@@ -105,23 +105,26 @@ class MedicineViewSet(viewsets.ViewSet):
             serializer.is_valid(raise_exception=True)
             serializer.save()
 
-            # access the serializer id which ia saved in the DB table
-            # medicine_id=serializer.data['id'];
-            # print(medicine_id)
+
+            # Comment this out
+
+            access the serializer id which ia saved in the DB table
+            medicine_id=serializer.data['id'];
+            print(medicine_id)
 
             # Adding and saving id into Medicine Details table
             medicine_details_list=[]
-            # for medicine_detail in request.data['medicine_details']:
-            #     print(medicine_detail)
+            for medicine_detail in request.data['medicine_details']:
+                print(medicine_detail)
 
                 # Adding medicine id which will work form medicine detail serializer
-                # medicine_detail["medicine_id"] = medicine_id
-                # medicine_details_list.append(medicine_detail)
-                # print(medicine_detail)
+                medicine_detail["medicine_id"] = medicine_id
+                medicine_details_list.append(medicine_detail)
+                print(medicine_detail)
 
-            # serializer2 = MedicalDetailsSerializer(data=medicine_details_list, many=True, context={"request":request})
-            # serializer2.is_valid()
-            # serializer2.save()
+            serializer2 = MedicalDetailsSerializer(data=medicine_details_list, many=True, context={"request":request})
+            serializer2.is_valid()
+            serializer2.save()
 
 
             dict_response = {"error": False, "message": "Medicine Data Saved Successfully"}
