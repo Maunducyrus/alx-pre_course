@@ -126,6 +126,8 @@ class MedicineViewSet(viewsets.ViewSet):
             serializer2.is_valid()
             serializer2.save()
 
+            # above comment ends here
+
 
             dict_response = {"error": False, "message": "Medicine Data Saved Successfully"}
         except:
