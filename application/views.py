@@ -1,6 +1,6 @@
 from os import access
 
-from django.contrib.gis.serializers.geojson import Serializer
+# from django.contrib.gis.serializers.geojson import Serializer
 from django.shortcuts import render, get_object_or_404
 
 from rest_framework.generics import get_object_or_404
@@ -77,7 +77,7 @@ class CompanyBankViewSet(viewsets.ViewSet):
         queryset = CompanyBank.objects.all()
         companybank = get_object_or_404(queryset, pk=pk)
         serializer = CompanyBankSerializer(companybank, context={"request": request})
-        return Response({"error":false, "message":"Single Data Fetch", "data": serializer.data})
+        return Response({"error":False, "message":"Single Data Fetch", "data": serializer.data})
 
     def update(self, request, pk=None):
         queryset = CompanyBank.objects.all()
@@ -108,8 +108,8 @@ class MedicineViewSet(viewsets.ViewSet):
 
             # Comment this out
 
-            access the serializer id which ia saved in the DB table
-            medicine_id=serializer.data['id'];
+            # access the serializer id which ia saved in the DB table
+            medicine_id=serializer.data['id']
             print(medicine_id)
 
             # Adding and saving id into Medicine Details table
@@ -163,7 +163,7 @@ class MedicineViewSet(viewsets.ViewSet):
         medicine_details_serializer=MedicineSerializerSimple(medicine_details, many=True)
         serializer_data["medicine_details"]=medicine_details_serializer.data
 
-        return Response({"error": false, "message": "Single Data Fetch", "data": serializer.data})
+        return Response({"error": False, "message": "Single Data Fetch", "data": serializer.data})
 
     def update(self, request, pk=None):
         queryset = Medicine.objects.all()
