@@ -37,7 +37,7 @@ class Login extends React.Component {
                 <div className ="login-box">
                     <div class="logo">
                         {/* <a href="javascript:void(0);">Admin<b>BSB</b></a> */}
-                        <small>Admin BootStrap Based - Material Design</small>
+                        <small>Medical Store Management System</small>
                     </div>
                     <div className="card">
                         <div className="body">
