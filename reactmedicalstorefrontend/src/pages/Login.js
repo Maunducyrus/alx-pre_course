@@ -15,10 +15,10 @@ class Login extends React.Component {
         username: "",
         password: "",
     }
-    // saveInputs(event) {
-    //     var key=event.target.name;
-    //     this.setState({[key]: event.target.value});
-    // }
+    saveInputs(event) {
+        var key=event.target.name;
+        this.setState({[key]: event.target.value});
+    }
 
     formSubmit(event) {
         event.preventDefault();
