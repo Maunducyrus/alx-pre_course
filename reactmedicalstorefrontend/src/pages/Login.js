@@ -10,6 +10,19 @@ import GoogleFontLoader from 'react-google-font-loader';
 
 
 class Login extends React.Component {
+
+    state = {
+        username: "",
+        password: "",
+    }
+    // saveInputs(event) {
+    //     var key=event.target.name;
+    //     this.setState({[key]: event.target.value});
+    // }
+
+    formSubmit(event) {
+        event.preventDefault();
+    }
     render() {
 
         document.body.className = 'login-page'
@@ -35,20 +48,29 @@ class Login extends React.Component {
                 />
 
                 <div className ="login-box">
-                    <div class="logo">
+                    <div className="logo">
                         {/* <a href="javascript:void(0);">Admin<b>BSB</b></a> */}
                         <small>Medical Store Management System</small>
                     </div>
                     <div className="card">
                         <div className="body">
-                            <form id="sign_in" method="POST" novalidate="novalidate">
+                            <form id="sign_in" method="POST" onSubmit={this.formSubmit} novalidate="novalidate">
                                 <div className="msg">Sign in to start your session</div>
                                 <div className="input-group">
                                     <span className="input-group-addon">
                                         <i className="material-icons">person</i>
                                     </span>
                                     <div className="form-line">
-                                        <input type="text" className="form-control" name="username" placeholder="Username" required="" autofocus />
+                                        <input 
+                                        type="text" 
+                                        className="form-control" 
+                                        name="username" 
+                                        placeholder="Username" 
+                                        required="" 
+                                        autofocus 
+                                        onChange={this.saveInputs}
+
+                                        />
                                     </div>
                                 </div>
                                 <div className="input-group">
@@ -56,7 +78,14 @@ class Login extends React.Component {
                                         <i className="material-icons">lock</i>
                                     </span>
                                     <div className="form-line">
-                                        <input type="password" class="form-control" name="password" placeholder="Password" required />
+                                        <input 
+                                        type="password" 
+                                        class="form-control" 
+                                        name="password" 
+                                        placeholder="Password" 
+                                        required 
+                                        onChange={this.saveInputs}
+                                        />
                                     </div>
                                 </div>
                                 <div className="row">
