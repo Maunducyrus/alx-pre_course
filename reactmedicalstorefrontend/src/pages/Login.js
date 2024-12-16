@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import 'adminbsb-materialdesign/plugins/bootstrap/css/bootstrap.css'
 import 'adminbsb-materialdesign/plugins/node-waves/waves.css';
 import 'adminbsb-materialdesign/plugins/animate-css/animate.css';
@@ -10,18 +10,28 @@ import GoogleFontLoader from 'react-google-font-loader';
 
 
 class Login extends React.Component {
+    constructor(props) {
+        super(props);
+
+        // Bind methods to 'this'
+        this.saveInputs = this.saveInputs.bind(this);
+        this.formSubmit = this.formSubmit.bind(this);
+    }
 
     state = {
         username: "",
         password: "",
+        btnDisabled: true,
     }
     saveInputs(event) {
         var key=event.target.name;
         this.setState({[key]: event.target.value});
+        // if(this : any, useCallback)
     }
 
     formSubmit(event) {
         event.preventDefault();
+        console.log(this.state);
     }
     render() {
 
@@ -49,8 +59,8 @@ class Login extends React.Component {
 
                 <div className ="login-box">
                     <div className="logo">
-                        {/* <a href="javascript:void(0);">Admin<b>BSB</b></a> */}
-                        <small>Medical Store Management System</small>
+                        <a href="javascript:void(0);">Medical Store Management System</a>
+                        {/* <small>Medical Store Management System</small> */}
                     </div>
                     <div className="card">
                         <div className="body">
