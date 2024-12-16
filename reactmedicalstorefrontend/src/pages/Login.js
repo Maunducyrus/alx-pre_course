@@ -109,7 +109,10 @@ class Login extends React.Component {
                                         <label for="rememberme">Remember Me</label>
                                     </div>
                                     <div className="col-xs-4">
-                                        <button className="btn btn-block bg-pink waves-effect" type="submit">SIGN IN</button>
+                                        <button className="btn btn-block bg-pink waves-effect" 
+                                        type="submit"
+                                        disabled={this.state.btnDisabled}
+                                        >SIGN IN</button>
                                     </div>
                                 </div>
                                 <div className="row m-t-15 m-b--20">
