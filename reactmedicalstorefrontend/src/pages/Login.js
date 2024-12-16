@@ -5,6 +5,7 @@ import 'adminbsb-materialdesign/plugins/animate-css/animate.css';
 import 'adminbsb-materialdesign/plugins/bootstrap/css/bootstrap.css'
 import 'adminbsb-materialdesign/css/style.css'
 import GoogleFontLoader from 'react-google-font-loader';
+import AuthHandler from '../utils/AuthHandler';
 
 
 
@@ -37,6 +38,11 @@ class Login extends React.Component {
     formSubmit(event) {
         event.preventDefault();
         console.log(this.state);
+        AuthHandler.login(this.state.username, this.state.password);
+    };
+
+    handleAjaxResponse=(data) =>{
+        console.log(data);
     }
     render() {
 
