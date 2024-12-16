@@ -1,4 +1,5 @@
 import axios from "axios";
+import config from "./Config";
 
 class AuthHandler{
     static login (username, password, callback){
