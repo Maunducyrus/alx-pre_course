@@ -26,7 +26,12 @@ class Login extends React.Component {
     saveInputs(event) {
         var key=event.target.name;
         this.setState({[key]: event.target.value});
-        // if(this : any, useCallback)
+        if(this.state.username != "" && this.state.password != "") {
+            this.setState({btnDisabled: false});
+        } 
+        else {
+            this.setState({btnDisabled: true});
+        }
     }
 
     formSubmit(event) {
