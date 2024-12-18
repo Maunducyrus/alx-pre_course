@@ -72,6 +72,11 @@ class Login extends React.Component {
                 <div class="alert alert-success">
             <strong>Login successfully!</strong> </div>
             );
+        }else if(this.state.loginStatus=== 4){
+            return (
+                <div class="alert alert-danger">
+            <strong>Invalid Login Details</strong> </div>
+            );
         }
     }
     render() {
