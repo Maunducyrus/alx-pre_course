@@ -38,7 +38,11 @@ class Login extends React.Component {
     formSubmit(event) {
         event.preventDefault();
         console.log(this.state);
-        AuthHandler.login(this.state.username, this.state.password);
+        AuthHandler.login(
+            this.state.username,
+            this.state.password,
+            this.handleAjaxResponse,
+        );
     };
 
     handleAjaxResponse=(data) =>{
