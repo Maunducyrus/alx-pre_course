@@ -23,6 +23,7 @@ class Login extends React.Component {
         username: "",
         password: "",
         btnDisabled: true,
+        loginStatus: 0,
     }
     saveInputs(event) {
         var key=event.target.name;
@@ -38,6 +39,9 @@ class Login extends React.Component {
     formSubmit(event) {
         event.preventDefault();
         console.log(this.state);
+        this.setState({loginStatus: 1}); // For demonstration purposes, simulating an asynchronous request.
+
+
         AuthHandler.login(
             this.state.username,
             this.state.password,
@@ -47,6 +51,10 @@ class Login extends React.Component {
 
     handleAjaxResponse=(data) =>{
         console.log(data);
+    }
+
+    getMessage=() =>{
+
     }
     render() {
 
@@ -133,6 +141,7 @@ class Login extends React.Component {
                                         <a href="forgot-password.html">Forgot Password?</a>
                                     </div>
                                 </div>
+                                {this.getMessage()}
                             </form>
                         </div>
                     </div>
