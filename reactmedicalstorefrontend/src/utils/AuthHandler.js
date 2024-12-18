@@ -10,12 +10,12 @@ class AuthHandler{
             // console.log(response);
             if(response.statusCode === 200){
                 reactLocalStorage.set("refresh", response.data.refresh);
-                callback("Login successfully...");
+                callback({error: false, message: "Login successfully..."});
             }
         })
         .catch(function(error){
             // console.log(error.response);
-            callback("Error During Login - Invalid Login Details...");
+            callback({error: true, message: "Error During Login - Invalid Login Details..."});
         });
     }
 }
