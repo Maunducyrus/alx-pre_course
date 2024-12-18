@@ -60,7 +60,19 @@ class Login extends React.Component {
     }
 
     getMessage=() =>{
-
+        if(this.state.loginStatus===0){
+            return "";
+        }else if(this.state.loginStatus=== 1){
+            return (
+                <div class="alert alert-warning">
+            <strong>Logging in!</strong> Please Wait...</div>
+            );
+        }else if(this.state.loginStatus=== 3){
+            return (
+                <div class="alert alert-success">
+            <strong>Login successfully!</strong> </div>
+            );
+        }
     }
     render() {
 
