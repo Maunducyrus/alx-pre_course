@@ -14,7 +14,7 @@ class AuthHandler{
             }
         })
         .catch(function(error){
-            console.log(error.response);
+            // console.log(error.response);
             callback("Error During Login...");
         });
     }
