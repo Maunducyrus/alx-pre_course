@@ -51,6 +51,12 @@ class Login extends React.Component {
 
     handleAjaxResponse=(data) =>{
         console.log(data);
+        if(data.error){
+            this.setState({loginStatus: 4}); // Simulating an error response.
+        }
+        else{
+            this.setState({loginStatus:3}); 
+        }
     }
 
     getMessage=() =>{
