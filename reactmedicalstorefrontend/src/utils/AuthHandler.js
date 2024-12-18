@@ -15,7 +15,7 @@ class AuthHandler{
         })
         .catch(function(error){
             // console.log(error.response);
-            callback("Error During Login...");
+            callback("Error During Login - Invalid Login Details...");
         });
     }
 }
