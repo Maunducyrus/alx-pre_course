@@ -1,1 +1,2 @@
-MedicalStore management System with also simple API creation
+MedicalStore management System
+Simple API creation
