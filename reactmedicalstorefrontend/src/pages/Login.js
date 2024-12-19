@@ -25,15 +25,24 @@ class Login extends React.Component {
         btnDisabled: true,
         loginStatus: 0,
     }
+    // saveInputs(event) {
+    //     var key=event.target.name;
+    //     this.setState({[key]: event.target.value});
+    //     if(this.state.username != "" && this.state.password != "") {
+    //         this.setState({btnDisabled: false});
+    //     } 
+    //     else {
+    //         this.setState({btnDisabled: true});
+    //     }
+    // }
     saveInputs(event) {
-        var key=event.target.name;
-        this.setState({[key]: event.target.value});
-        if(this.state.username != "" && this.state.password != "") {
-            this.setState({btnDisabled: false});
-        } 
-        else {
-            this.setState({btnDisabled: true});
-        }
+        const key = event.target.name;
+        const value = event.target.value;
+        this.setState({ [key]: value }, () => {
+            this.setState({
+                btnDisabled: !(this.state.username && this.state.password),
+            });
+        });
     }
 
     formSubmit(event) {
@@ -53,26 +62,31 @@ class Login extends React.Component {
         console.log(data);
         if(data.error){
             this.setState({loginStatus: 4}); // Simulating an error response.
+            this.setState({ loginStatus: 4 });
         }
         else{
-            this.setState({loginStatus:3}); 
+            this.setState({loginStatus:3}); //successful response
+            this.setState({ loginStatus: 3 });
         }
     }
 
     getMessage=() =>{
         if(this.state.loginStatus===0){
             return "";
-        }else if(this.state.loginStatus=== 1){
+        }
+        else if(this.state.loginStatus=== 1){
             return (
                 <div class="alert alert-warning">
             <strong>Logging in!</strong> Please Wait...</div>
             );
-        }else if(this.state.loginStatus=== 3){
+        }
+        else if(this.state.loginStatus===3){
             return (
                 <div class="alert alert-success">
             <strong>Login successfully!</strong> </div>
             );
-        }else if(this.state.loginStatus=== 4){
+        }
+        else if(this.state.loginStatus=== 4){
             return (
                 <div class="alert alert-danger">
             <strong>Invalid Login Details</strong> </div>
