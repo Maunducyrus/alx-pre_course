@@ -25,25 +25,25 @@ class Login extends React.Component {
         btnDisabled: true,
         loginStatus: 0,
     }
-    // saveInputs(event) {
-    //     var key=event.target.name;
-    //     this.setState({[key]: event.target.value});
-    //     if(this.state.username != "" && this.state.password != "") {
-    //         this.setState({btnDisabled: false});
-    //     } 
-    //     else {
-    //         this.setState({btnDisabled: true});
-    //     }
-    // }
     saveInputs(event) {
-        const key = event.target.name;
-        const value = event.target.value;
-        this.setState({ [key]: value }, () => {
-            this.setState({
-                btnDisabled: !(this.state.username && this.state.password),
-            });
-        });
+        var key=event.target.name;
+        this.setState({[key]: event.target.value});
+        if(this.state.username != "" && this.state.password != "") {
+            this.setState({btnDisabled: false});
+        } 
+        else {
+            this.setState({btnDisabled: true});
+        }
     }
+    // saveInputs(event) {
+    //     const key = event.target.name;
+    //     const value = event.target.value;
+    //     this.setState({ [key]: value }, () => {
+    //         this.setState({
+    //             btnDisabled: !(this.state.username && this.state.password),
+    //         });
+    //     });
+    // }
 
     formSubmit(event) {
         event.preventDefault();
@@ -80,7 +80,7 @@ class Login extends React.Component {
         //     <strong>Logging in!</strong> Please Wait...</div>
         //     );
         // }
-        else if(this.state.loginStatus===3){
+        else if(this.state.loginStatus===1){
             return (
                 <div class="alert alert-success">
             <strong>Login successfully!</strong> </div>
