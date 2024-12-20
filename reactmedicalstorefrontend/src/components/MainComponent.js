@@ -9,12 +9,23 @@ import GoogleFontLoader from 'react-google-font-loader';
 import "adminbsb-materialdesign/css/themes/all-themes.css";
 
 class MainComponent extends Component {
+    state = {
+        bodyClass: "theme-red ls-closed"
+    }
+    onBarClick =()=>{
+        if(this.state.bodyClass == "theme-red ls-closed overlay-open"){
+        this.setState({bodyClass: "theme-red ls-closed"});}
+        else if(this.state.bodyClass == "theme-red ls-closed"){
+            this.setState({bodyClass: "theme-red ls-closed overlay-open"});
+    }
+};
+
     render() {
             if (window.screen.width > 1150) {
             // if (window.innerWidth > 1150) {
             document.getElementById("root").className = "theme-red"
             } else {
-            document.getElementById("root").className = "theme-red ls-closed"
+            document.getElementById("root").className = this.state.bodyClass;
         }
 
         return <React.Fragment>
