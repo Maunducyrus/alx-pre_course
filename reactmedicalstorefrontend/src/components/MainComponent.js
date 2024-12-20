@@ -10,13 +10,17 @@ import "adminbsb-materialdesign/css/themes/all-themes.css";
 
 class MainComponent extends Component {
     state = {
-        bodyClass: "theme-red ls-closed"
+        bodyClass: "theme-red ls-closed",
+        displayOverlay: "none",
     }
     onBarClick =()=>{
         if(this.state.bodyClass == "theme-red ls-closed overlay-open"){
-        this.setState({bodyClass: "theme-red ls-closed"});}
+        this.setState({bodyClass: "theme-red ls-closed"});
+        this.setState({displayOverlayOpen: "none"});
+    }
         else if(this.state.bodyClass == "theme-red ls-closed"){
             this.setState({bodyClass: "theme-red ls-closed overlay-open"});
+            this.setState({displayOverlayOpen: "block"});
     }
 };
 
@@ -47,8 +51,8 @@ class MainComponent extends Component {
                 ]}
                 />
 
-            <Overlay/>
-            <Navbar/>
+            <Overlay display={this.state.displayOverlay}/>
+            <Navbar onBarClick={this.onBarClick}/>
             <Sidebar/>
             <HomeComponets/>
         </React.Fragment>

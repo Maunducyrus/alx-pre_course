@@ -68,6 +68,16 @@ import React, { Component } from "react";
 import usericon from "adminbsb-materialdesign/images/user.png";
 
 class Sidebar extends Component {
+  state={
+    defaultClass: "btn-group user-helper-dropdown",
+  }
+  showLogoutMenu=()=>{
+    if (this.state.defaultClass == "btn-group user-helper-dropdown") {
+      this.setState({ defaultClass: "btn-group user-helper-dropdown open" });
+    }else {
+      this.setState({ defaultClass: "btn-group user-helper-dropdown" });
+    }
+  }
   render() {
     return (
       <section>
@@ -87,12 +97,13 @@ class Sidebar extends Component {
                 John Doe
               </div>
               <div className="email">john.doe@example.com</div>
-              <div className="btn-group user-helper-dropdown">
+              <div className={this.state.defaultClass}>
                 <i
                   className="material-icons"
                   data-toggle="dropdown"
                   aria-haspopup="true"
                   aria-expanded="true"
+                  onClick={this.showLogoutMenu}
                 >
                   keyboard_arrow_down
                 </i>

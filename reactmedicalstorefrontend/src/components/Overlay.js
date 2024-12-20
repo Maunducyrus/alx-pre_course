@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 
 class Overlay extends Component {
     render() {
-        return <div className="overlay"></div>;
+        return <div className="overlay" style={{ display: this.props.display }}></div>;
     }
 }
 

@@ -15,7 +15,7 @@ class Narbar extends Component {
                 </a> */}
                 <a 
                 href="#"
-                className="bars" ></a>
+                className="bars" onClick={this.props.onBarClick}></a>
                 <a className="navbar-brand" href="index.html">
                     ADMINBSB - MATERIAL DESIGN
                     </a>
