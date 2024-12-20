@@ -1,25 +1,27 @@
 // import React from "react";
 import React, { Component } from "react"; // Import both React and Component
 import Overlay from "./Overlay"; // Import the Overlay component
-import PageLoader from "./PageLoader"; // Import the PageLoader
+// import PageLoader from "./PageLoader"; // Import the PageLoader
 import Navbar from "./Navbar"; //Import the Navbar component
 import Sidebar from "./Sidebar"; //Import the Sidebar component
+import HomeComponets from "./HomeComponents";
 
 import GoogleFontLoader from 'react-google-font-loader';
 import "adminbsb-materialdesign/css/themes/all-themes.css";
 
-class MainComponent extends Component {
+class MainComponent extends React.Component {
     state = {
         bodyClass: "theme-red ls-closed",
         displayOverlay: "none",
-    }
+        width: window.screen.width,
+    };
     onBarClick =()=>{
         if(this.state.bodyClass == "theme-red ls-closed overlay-open"){
         this.setState({bodyClass: "theme-red ls-closed"});
         this.setState({displayOverlayOpen: "none"});
     }
-        else if(this.state.bodyClass == "theme-red ls-closed"){
-            this.setState({bodyClass: "theme-red ls-closed overlay-open"});
+        else if(this.state.bodyClass == "theme-red ls-closed") {
+            this.setState({bodyClass: "theme-red ls-closed overlay-open" });
             this.setState({displayOverlayOpen: "block"});
     }
 };
