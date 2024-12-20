@@ -70,7 +70,18 @@ import usericon from "adminbsb-materialdesign/images/user.png";
 class Sidebar extends Component {
   state={
     defaultClass: "btn-group user-helper-dropdown",
+  };
+
+  componentWillMount(){
+    document.addEventListener("mousedown", this.handleMouseClick, false);
   }
+  componentWillMount(){
+    document.removeEventListener("mousedown", this.handleMouseClick, false);
+  }
+  handleMouseClick=(event)=>{
+    console.log("ok");
+  }
+
   showLogoutMenu=()=>{
     if (this.state.defaultClass == "btn-group user-helper-dropdown") {
       this.setState({ defaultClass: "btn-group user-helper-dropdown open" });
