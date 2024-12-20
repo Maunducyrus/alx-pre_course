@@ -10,7 +10,12 @@ import "adminbsb-materialdesign/css/themes/all-themes.css";
 
 class MainComponent extends Component {
     render() {
-        document.getElementById("root").className = "theme-red"
+            if (window.screen.width > 1150) {
+            // if (window.innerWidth > 1150) {
+            document.getElementById("root").className = "theme-red"
+            } else {
+            document.getElementById("root").className = "theme-red ls-closed"
+        }
 
         return <React.Fragment>
                 <GoogleFontLoader

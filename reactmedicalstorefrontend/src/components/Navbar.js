@@ -16,7 +16,7 @@ class Narbar extends Component {
                 <a 
                 href="#"
                 className="bars" 
-                style= {{display: "block"}}>
+                style= {{display: "none"}}>
                 </a>
                 <a className="navbar-brand" href="index.html">
                     ADMINBSB - MATERIAL DESIGN

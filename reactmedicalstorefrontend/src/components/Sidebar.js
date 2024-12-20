@@ -147,7 +147,7 @@ class Sidebar extends Component {
                   position: "absolute",
                   top: "0px",
                   opacity: "0.4",
-                  display: "block",
+                  display: "none",
                   borderRadius: "0px",
                   zIndex: "99",
                   right: "1px",
