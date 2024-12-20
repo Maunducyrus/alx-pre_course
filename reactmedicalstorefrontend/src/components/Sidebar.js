@@ -72,14 +72,24 @@ class Sidebar extends Component {
     defaultClass: "btn-group user-helper-dropdown",
   };
 
+  constructor(props) {
+    super(props);
+    this.divref=React.createRef();
+  }
+
   componentWillMount(){
     document.addEventListener("mousedown", this.handleMouseClick, false);
   }
-  componentWillMount(){
+  componentWillUnmount(){
     document.removeEventListener("mousedown", this.handleMouseClick, false);
   }
   handleMouseClick=(event)=>{
     console.log("ok");
+    if(event.target === this.divref.current) {
+      return;
+    } else {
+      this.setState({ defaultClass: "btn-group user-helper-dropdown" });
+    }
   }
 
   showLogoutMenu=()=>{
@@ -115,6 +125,7 @@ class Sidebar extends Component {
                   aria-haspopup="true"
                   aria-expanded="true"
                   onClick={this.showLogoutMenu}
+                  ref={this.divref}
                 >
                   keyboard_arrow_down
                 </i>
