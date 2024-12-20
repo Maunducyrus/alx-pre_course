@@ -1,9 +1,12 @@
 // import React from "react";
 import React, { Component } from "react"; // Import both React and Component
+import Overlay from "./Overlay"; // Import the Overlay component
 
 class MainComponent extends Component {
     render() {
-        return <h1>Home</h1>
+        return <React.Fragment>
+            <Overlay/>
+        </React.Fragment>
     }
 }
 
