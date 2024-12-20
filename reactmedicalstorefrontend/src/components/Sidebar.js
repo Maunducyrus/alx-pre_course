@@ -115,9 +115,9 @@ class Sidebar extends Component {
                 aria-haspopup="true"
                 aria-expanded="false"
               >
-                John Doe
+                Maundu Cyrus
               </div>
-              <div className="email">john.doe@example.com</div>
+              <div className="email">devsben345@gmail.com</div>
               <div className={this.state.defaultClass}>
                 <i
                   className="material-icons"
@@ -150,7 +150,7 @@ class Sidebar extends Component {
                 position: "relative",
                 overflow: "hidden",
                 width: "auto",
-                height: "334px",
+                // height: "334px",
               }}
             >
               <ul
@@ -158,7 +158,7 @@ class Sidebar extends Component {
                 style={{
                   overflow: "hidden",
                   width: "auto",
-                  height: "334px",
+                  // height: "334px",
                 }}
               >
                 <li className="header">MAIN NAVIGATION</li>
@@ -184,7 +184,7 @@ class Sidebar extends Component {
                   borderRadius: "0px",
                   zIndex: "99",
                   right: "1px",
-                  height: "119.953px",
+                  height: "30px",
                 }}
               ></div>
             </div>
@@ -207,10 +207,10 @@ class Sidebar extends Component {
           <div className="legal">
             <div className="copyright">
               © 2016 - 2017{" "}
-              <a href="javascript:void(0);">AdminBSB - Material Design</a>.
+              <a href="javascript:void(0);">MaunduCyrus - Medical Store Management System</a>.
             </div>
             <div className="version">
-              <b>Version: </b> 1.0.5
+              <b>Lecturer: </b> TC254
             </div>
           </div>
         </aside>
