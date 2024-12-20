@@ -6,10 +6,12 @@ import Navbar from "./Navbar"; //Import the Navbar component
 import Sidebar from "./Sidebar"; //Import the Sidebar component
 
 import GoogleFontLoader from 'react-google-font-loader';
-
+import "adminbsb-materialdesign/css/themes/all-themes.css";
 
 class MainComponent extends Component {
     render() {
+        document.getElementById("root").className = "theme-red"
+
         return <React.Fragment>
                 <GoogleFontLoader
                 fonts={[
