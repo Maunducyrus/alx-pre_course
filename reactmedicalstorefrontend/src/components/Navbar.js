@@ -1,4 +1,5 @@
-import React from "react";
+// import React from "react";
+import React, { Component } from 'react';
 
 class Narbar extends Component {
     render() {
@@ -15,7 +16,7 @@ class Narbar extends Component {
                 <a 
                 href="#"
                 className="bars" 
-                style="display: block;">
+                style= {{display: "block"}}>
                 </a>
                 <a className="navbar-brand" href="index.html">
                     ADMINBSB - MATERIAL DESIGN
