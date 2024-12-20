@@ -21,7 +21,18 @@ class Siderbar extends Component {
                 </div>
             </div>
             <div className="menu">
-                <div className="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 334px;"><ul className="list" style="overflow: hidden; width: auto; height: 334px;">
+                <div className="slimScrollDiv"
+                 style={{ 
+                    position: "relative",
+                    overflow: "hidden", 
+                    width: "auto", 
+                    height: "334px" }} >
+                     <ul className="list" 
+                     style={{
+                        overflow: "hidden", 
+                        width: "auto", 
+                        height: "334px" }}
+                        >
                     <li className="header">MAIN NAVIGATION</li>
                     <li className="active">
                         <a href="index.html" className="toggled waves-effect waves-block">
@@ -30,7 +41,7 @@ class Siderbar extends Component {
                         </a>
                     </li>
                 </ul>
-                <div className="slimScrollBar" style="background: rgba(0, 0, 0, 0.5); width: 4px; position: absolute; top: 0px; opacity: 0.4; display: block; border-radius: 0px; z-index: 99; right: 1px; height: 119.953px;"></div><div className="slimScrollRail" style="width: 4px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 0px; background: rgb(51, 51, 51); opacity: 0.2; z-index: 90; right: 1px;"></div></div>
+                <div className="slimScrollBar" style={{ background: "rgba(0, 0, 0, 0.5)", width: "4px", position: "absolute", top: "0px", opacity: "0.4", display: "block", borderRadius: "0px", z-index: "99", right: "1px", height: "119.953px"></div><div className="slimScrollRail" style="width: 4px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 0px; background: rgb(51, 51, 51); opacity: 0.2; z-index: 90; right: 1px;"></div></div>
             </div>
            
             <div className="legal">
