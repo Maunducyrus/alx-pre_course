@@ -65,6 +65,7 @@
 // export default Siderbar; 
 
 import React, { Component } from "react";
+import usericon from "adminbsb-materialdesign/images/user.png";
 
 class Sidebar extends Component {
   render() {
@@ -74,11 +75,7 @@ class Sidebar extends Component {
           <div className="user-info">
             <div className="image">
               <img
-                src="images/user.png"
-                width="48"
-                height="48"
-                alt="User"
-              />
+                src={usericon} width="48" height="48" alt="User" />
             </div>
             <div className="info-container">
               <div
