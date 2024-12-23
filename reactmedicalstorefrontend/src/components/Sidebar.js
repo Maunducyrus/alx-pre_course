@@ -141,7 +141,7 @@ class Sidebar extends Component {
           </div>
           <div className="legal">
             <div className="copyright">
-              © 2016 - 2017{" "}
+              © 2024{" "}
               <a href="javascript:void(0);">MaunduCyrus - Medical Store Management System</a>.
             </div>
             <div className="version">
