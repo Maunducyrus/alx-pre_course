@@ -150,7 +150,7 @@ class Sidebar extends Component {
                 position: "relative",
                 overflow: "hidden",
                 width: "auto",
-                // height: "334px",
+                height: "57px",
               }}
             >
               <ul
@@ -158,7 +158,7 @@ class Sidebar extends Component {
                 style={{
                   overflow: "hidden",
                   width: "auto",
-                  // height: "334px",
+                  height: "57px",
                 }}
               >
                 <li className="header">MAIN NAVIGATION</li>
