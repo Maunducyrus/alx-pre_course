@@ -1,7 +1,7 @@
 // import React from "react";
 import React, { Component } from "react"; // Import both React and Component
 import Overlay from "./Overlay"; // Import the Overlay component
-// import PageLoader from "./PageLoader"; // Import the PageLoader
+ 
 import Navbar from "./Navbar"; //Import the Navbar component
 import Sidebar from "./Sidebar"; //Import the Sidebar component
 import HomeComponets from "./HomeComponents";
