@@ -27,9 +27,11 @@ class MainComponent extends React.Component {
     render() {
             if (window.screen.width > 1150) {
             // if (window.innerWidth > 1150) {
-            document.getElementById("root").className = "theme-red"
+            document.getElementById("root").className = "theme-red";
             } else {
-            document.getElementById("root").className = this.state.bodyClass;
+                // document.getElementById("root").className = "theme-red ls-closed";
+                document.getElementById("root").className = this.state.bodyClass;
+
         }
 
         return <React.Fragment>
