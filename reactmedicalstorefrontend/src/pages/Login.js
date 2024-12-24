@@ -96,7 +96,9 @@ class Login extends React.Component {
         }
     }
     render() {
-
+        if (AuthHandler.loggedIn()){
+            return <Redirect to = {config.homeUrl} />;
+        }
         document.body.className = 'login-page'
 
         return (
