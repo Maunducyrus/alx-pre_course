@@ -6,6 +6,7 @@ import { PrivateRoute } from './utils/PrivateRoute';
 import Login from './pages/Login';
 import MainComponent from './components/MainComponent';
 import { PrivateRoute } from './utils/PrivateRoute';
+import CompanyComponent from './pages/CompanyComponent';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -13,7 +14,9 @@ root.render(
     <Router>
         <Routes>
             <Route exact path="/" element ={<Login/>}></Route>
-            <PrivateRoute exact path="/home" element={<MainComponent/>}></PrivateRoute>
+            <PrivateRoute exact path="/home" page={<HomeComponent/>}></PrivateRoute>
+            <PrivateRoute exact path="/company" page={<CompanyComponent/>}></PrivateRoute>
+
             
         </Routes>
     </Router>);
