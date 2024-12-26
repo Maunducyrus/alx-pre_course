@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { BrowserRouter as Router, Route, Routes } from'react-router-dom'
-import { PrivateRoute } from './utils/PrivateRouteNew';
+import { PrivateRoute, PrivateRouteNew } from './utils/PrivateRouteNew';
 
 import Login from './pages/Login';
 import MainComponent from './components/MainComponent';
@@ -14,8 +14,8 @@ root.render(
     <Router>
         <Routes>
             <Route exact path="/" element ={<Login/>}></Route>
-            <PrivateRoute exact path="/home" page={<HomeComponent/>}></PrivateRoute>
-            <PrivateRoute exact path="/company" page={<CompanyComponent/>}></PrivateRoute>
+            <PrivateRouteNew exact path="/home" page={<HomeComponent/>}></PrivateRouteNew>
+            <PrivateRouteNew exact path="/company" page={<CompanyComponent/>}></PrivateRouteNew>
 
             
         </Routes>
