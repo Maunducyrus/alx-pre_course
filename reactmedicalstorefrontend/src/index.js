@@ -1,11 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { BrowserRouter as Router, Route, Routes } from'react-router-dom'
-import { PrivateRoute } from './utils/PrivateRoute';
+import { PrivateRoute } from './utils/PrivateRouteNew';
 
 import Login from './pages/Login';
 import MainComponent from './components/MainComponent';
-import { PrivateRoute } from './utils/PrivateRoute';
+import { PrivateRoute } from './utils/PrivateRouteNew';
 import CompanyComponent from './pages/CompanyComponent';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
