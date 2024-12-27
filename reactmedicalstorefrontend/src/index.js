@@ -10,6 +10,7 @@ import CompanyComponent from './pages/CompanyComponent';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
+// roots
 root.render(
     <Router>
         <Routes>
