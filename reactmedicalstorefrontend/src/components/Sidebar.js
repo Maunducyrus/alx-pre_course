@@ -96,16 +96,20 @@ class Sidebar extends Component {
                   height: "57px",
                 }}
               >
-                <li className="header">MAIN NAVIGATION</li>
-                <li className="active">
+                {/* adding more items to the sidebar */}
+                {config.sidebarItem.map(
+                  (item)=> <li className="active">
                   <a
-                    href="index.html"
+                    href="item.url"
                     className="toggled waves-effect waves-block"
                   >
-                    <i className="material-icons">home</i>
-                    <span>Home</span>
+                    <i className="material-icons">{item.icons}</i>
+                    <span>{item.title}</span>
                   </a>
                 </li>
+                )}
+                {/* <li className="header">MAIN NAVIGATION</li> */}
+              
               </ul>
               <div
                 className="slimScrollBar"
