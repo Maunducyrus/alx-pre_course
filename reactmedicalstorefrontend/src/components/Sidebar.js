@@ -85,7 +85,7 @@ class Sidebar extends Component {
                 position: "relative",
                 overflow: "hidden",
                 width: "auto",
-                height: "57px",
+                // height: "57px",
               }}
             >
               <ul
@@ -93,7 +93,7 @@ class Sidebar extends Component {
                 style={{
                   overflow: "hidden",
                   width: "auto",
-                  height: "57px",
+                  // height: "57px",
                 }}
               >
                 {/* adding more items to the sidebar */}
