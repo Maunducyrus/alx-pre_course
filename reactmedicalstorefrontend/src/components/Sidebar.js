@@ -99,13 +99,13 @@ class Sidebar extends Component {
                 {/* adding more items to the sidebar */}
                 {config.sidebarItem.map((item)=> (
                 <li className={item.index == this.props.activepage ? "active" : ""}>
-                  <a
-                    href="item.url"
+                  <Link
+                    to="item.url"
                     className="toggled waves-effect waves-block"
                   >
                     <i className="material-icons">{item.icons}</i>
                     <span>{item.title}</span>
-                  </a>
+                  </Link>
                 </li>)
                 )}
                 {/* <li className="header">MAIN NAVIGATION</li> */}

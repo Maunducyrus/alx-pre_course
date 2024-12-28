@@ -39,6 +39,13 @@ class MainComponent extends Component {
         });
     };
 
+    onscreenresize = () => {
+        console.log(window.screen.width);
+    };
+
+    componentDidMount(){
+        window.addEventListener("resize", this.onscreenresize);
+    }
     render() {
         const { bodyClass, displayOverlay, width } = this.state;
 
