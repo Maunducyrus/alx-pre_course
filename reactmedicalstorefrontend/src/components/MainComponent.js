@@ -56,7 +56,7 @@ class MainComponent extends Component {
                 {/* <div id="root" className={rootClassName}> */}
                     <Overlay display={displayOverlay} />
                     <Navbar onBarClick={this.onBarClick} />
-                    <Sidebar />
+                    <Sidebar  activepage={this.props.activepage}/>
                     <> {this.props.page} </>
                 {/* </div> */}
             </React.Fragment>

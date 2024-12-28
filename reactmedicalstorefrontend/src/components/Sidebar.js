@@ -98,7 +98,7 @@ class Sidebar extends Component {
               >
                 {/* adding more items to the sidebar */}
                 {config.sidebarItem.map((item)=> (
-                <li className={item.index == activepage ? "active" : ""}>
+                <li className={item.index == this.props.activepage ? "active" : ""}>
                   <a
                     href="item.url"
                     className="toggled waves-effect waves-block"
