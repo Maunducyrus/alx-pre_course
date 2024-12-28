@@ -15,8 +15,8 @@ root.render(
     <Router>
         <Routes>
             <Route exact path="/" element ={<Login/>}></Route>
-            <PrivateRouteNew exact path="/home" page={<HomeComponent/>}></PrivateRouteNew>
-            <PrivateRouteNew exact path="/company" page={<CompanyComponent/>}></PrivateRouteNew>
+            <PrivateRouteNew exact path="/home" activepage="0" page={<HomeComponent/>}></PrivateRouteNew>
+            <PrivateRouteNew exact path="/company" activepage="1" page={<CompanyComponent/>}></PrivateRouteNew>
 
             
         </Routes>
