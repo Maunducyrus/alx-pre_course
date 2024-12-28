@@ -97,8 +97,8 @@ class Sidebar extends Component {
                 }}
               >
                 {/* adding more items to the sidebar */}
-                {config.sidebarItem.map(
-                  (item)=> <li className="active">
+                {config.sidebarItem.map((item)=> (
+                <li className={item.index == activepage ? "active" : ""}>
                   <a
                     href="item.url"
                     className="toggled waves-effect waves-block"
@@ -106,7 +106,7 @@ class Sidebar extends Component {
                     <i className="material-icons">{item.icons}</i>
                     <span>{item.title}</span>
                   </a>
-                </li>
+                </li>)
                 )}
                 {/* <li className="header">MAIN NAVIGATION</li> */}
               
