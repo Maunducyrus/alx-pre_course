@@ -8,7 +8,7 @@ export var PrivateRouteNew = ({ page, ...rest }) =>{
     <Route
     {...rest}
     render={() => 
-        AuthHandler.loggedIn() ? <MainComponent page={page}/> : <Redirect to='/' />
+        AuthHandler.loggedIn() ? (<MainComponent page={page} activepage={activepage} />) : (<Redirect to='/' />)
     } 
     />
     );
