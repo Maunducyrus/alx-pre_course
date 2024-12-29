@@ -7,6 +7,8 @@ import Login from './pages/Login';
 import MainComponent from './components/MainComponent';
 // import { PrivateRoute } from './utils/PrivateRouteNew';
 import CompanyComponent from './pages/CompanyComponent';
+import HomeComponent from './pages/HomeComponent';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
