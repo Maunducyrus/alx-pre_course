@@ -5,7 +5,7 @@ import { PrivateRoute, PrivateRouteNew } from './utils/PrivateRouteNew';
 
 import Login from './pages/Login';
 import MainComponent from './components/MainComponent';
-import { PrivateRoute } from './utils/PrivateRouteNew';
+// import { PrivateRoute } from './utils/PrivateRouteNew';
 import CompanyComponent from './pages/CompanyComponent';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
