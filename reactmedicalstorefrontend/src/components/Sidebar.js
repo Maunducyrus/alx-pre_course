@@ -67,7 +67,7 @@ class Sidebar extends Component {
                 <ul className="dropdown-menu pull-right">
                   <li>
                     <a
-                      href="javascript:void(0);"
+                      href="#"
                       className="waves-effect waves-block"
                     >
                       <i className="material-icons">input</i>Sign Out
@@ -98,7 +98,9 @@ class Sidebar extends Component {
               >
                 {/* adding more items to the sidebar */}
                 {config.sidebarItem.map((item)=> (
-                <li className={item.index == this.props.activepage ? "active" : ""}>
+                <li 
+                key={item.index}
+                className={item.index == this.props.activepage ? "active" : ""}>
                   <Link
                     to="item.url"
                     className="toggled waves-effect waves-block"
@@ -146,7 +148,7 @@ class Sidebar extends Component {
           <div className="legal">
             <div className="copyright">
               © 2024{" "}
-              <a href="javascript:void(0);">MaunduCyrus - Medical Store Management System</a>.
+              <a href="#">MaunduCyrus - Medical Store Management System</a>.
             </div>
             <div className="version">
               <b>Lecturer: </b> TC254

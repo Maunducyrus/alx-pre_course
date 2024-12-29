@@ -41,11 +41,18 @@ class MainComponent extends Component {
 
     onscreenresize = () => {
         console.log(window.screen.width);
-    };
+        this.setState({ width: window.screen.width });
+    }
 
-    componentDidMount(){
+    componentWillMount(){
         window.addEventListener("resize", this.onscreenresize);
     }
+
+    
+    componentWillUnmount(){
+        window.removeEventListener("resize", this.onscreenresize);
+    }
+
     render() {
         const { bodyClass, displayOverlay, width } = this.state;
 
