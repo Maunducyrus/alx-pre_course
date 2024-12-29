@@ -1,4 +1,4 @@
-
+import config from "../utils/Config";
 import React, { Component } from "react";
 import usericon from "adminbsb-materialdesign/images/user.png";
 
