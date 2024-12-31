@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Redirect } from "react-router-dom"
+import { Route, Redirect, Navigate } from "react-router-dom"
 import AuthHandler from "./AuthHandler";
 
 export var PrivateRoute = ({component:Component,...rest}) =>{
@@ -9,7 +9,7 @@ export var PrivateRoute = ({component:Component,...rest}) =>{
     <Route
     {...rest}
     element={(props) => 
-        AuthHandler.loggedIn() ? (<Component {...props}/>) : <Redirect to="/" />} 
+        AuthHandler.loggedIn() ? (<Component {...props}/>) : <Navigate to="/" />} 
         />
     );
 }
