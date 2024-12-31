@@ -7,7 +7,7 @@ export var PrivateRouteNew = ({ page, ...rest }) =>{
     return (
     <Route
     {...rest}
-    render={() => 
+    element={() => 
         AuthHandler.loggedIn() ? (<MainComponent page={page} activepage={activepage} />) : (<Navigate to='/' />)
     } 
     />
