@@ -27,3 +27,5 @@ export var PrivateRoute = ({ component: Component, ...rest }) => {
         />
     );
 };
+
+// .....
