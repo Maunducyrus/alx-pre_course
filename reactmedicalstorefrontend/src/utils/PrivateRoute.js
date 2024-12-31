@@ -8,7 +8,7 @@ export var PrivateRoute = ({component:Component,...rest}) =>{
     return (
     <Route
     {...rest}
-    render={(props) => 
+    element={(props) => 
         AuthHandler.loggedIn() ? (<Component {...props}/>) : <Redirect to="/" />} 
         />
     );
