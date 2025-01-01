@@ -25,3 +25,6 @@ export var PrivateRouteNew = ({ page, activepage, ...rest }) => {
         />
     );
 };
+
+export default PrivateRouteNew;
+
