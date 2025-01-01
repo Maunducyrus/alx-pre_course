@@ -17,13 +17,24 @@ root.render(
     <Router>
         <Routes>
             <Route exact path="/" element ={<Login/>}></Route>
-            <PrivateRouteNew exact path="/home" activepage="0" page={<HomeComponent/>}></PrivateRouteNew>
-            <PrivateRouteNew exact path="/company" activepage="1" page={<CompanyComponent/>}></PrivateRouteNew>
+            {/* <PrivateRouteNew exact path="/home" activepage="0" page={<HomeComponent/>}></PrivateRouteNew>
+            <PrivateRouteNew exact path="/company" activepage="1" page={<CompanyComponent/>}></PrivateRouteNew> */}
+
+            <Route
+                exact
+                path="/home"
+                element={<PrivateRouteNew page={<HomeComponent />} activepage="0" />}
+            />
+            <Route
+                exact
+                path="/company"
+                element={<PrivateRouteNew page={<CompanyComponent />} activepage="1" />}
+            />
 
             
         </Routes>
     </Router>,
-// document.getElementById("root")    
+document.getElementById("root")    
 );
 
 // Create a root and render the component
