@@ -16,13 +16,13 @@ class MainComponent extends Component {
         };
     }
 
-    componentDidMount() {
-        window.addEventListener("resize", this.handleResize);
-    }
+    // componentDidMount() {
+    //     window.addEventListener("resize", this.handleResize);
+    // }
 
-    componentWillUnmount() {
-        window.removeEventListener("resize", this.handleResize);
-    }
+    // componentWillUnmount() {
+    //     window.removeEventListener("resize", this.handleResize);
+    // }
 
     handleResize = () => {
         this.setState({ width: window.innerWidth });
