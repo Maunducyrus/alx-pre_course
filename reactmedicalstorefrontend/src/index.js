@@ -33,8 +33,8 @@ root.render(
 
             
         </Routes>
-    </Router>,
-document.getElementById("root")    
+    </Router>
+// document.getElementById("root")    
 );
 
 // Create a root and render the component
