@@ -21,12 +21,12 @@ root.render(
             <PrivateRouteNew exact path="/company" activepage="1" page={<CompanyComponent/>}></PrivateRouteNew> */}
 
             <Route
-                exact
+                // exact
                 path="/home"
                 element={<PrivateRouteNew page={<HomeComponent />} activepage="0" />}
             />
             <Route
-                exact
+                // exact
                 path="/company"
                 element={<PrivateRouteNew page={<CompanyComponent />} activepage="1" />}
             />
