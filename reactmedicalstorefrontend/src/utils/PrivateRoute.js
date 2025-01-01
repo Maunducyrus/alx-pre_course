@@ -28,4 +28,4 @@ export var PrivateRoute = ({ component: Component, ...rest }) => {
     );
 };
 
-// .....
+export default PrivateRoute;
