@@ -22,7 +22,9 @@ root.render(
 
             
         </Routes>
-    </Router>);
+    </Router>,
+// document.getElementById("root")    
+);
 
 // Create a root and render the component
 // const root = ReactDOM.createRoot(document.getElementById('root'));
