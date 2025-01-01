@@ -107,7 +107,7 @@ class Sidebar extends Component {
                   }
                 >
                   <Link
-                    to="item.url"
+                    to={item.url}
                     className="toggled waves-effect waves-block"
                   >
                     <i className="material-icons">{item.icons}</i>
