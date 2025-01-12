@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Navigate, Router } from "react-router-dom"
+import { Route, Navigate, Router, Routes } from "react-router-dom"
 import AuthHandler from "./AuthHandler";
 import MainComponent from "../components/MainComponent"
 
