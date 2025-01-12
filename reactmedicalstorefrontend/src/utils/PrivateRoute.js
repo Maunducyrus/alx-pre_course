@@ -8,6 +8,7 @@ export var PrivateRoute = ({component:Component,...rest}) =>{
     return (
     <Route
     {...rest}
+    // used element instead of render in Props
     element={(props) => 
         AuthHandler.loggedIn() ? (<Component {...props}/>) : <Navigate to="/" />} 
         />
