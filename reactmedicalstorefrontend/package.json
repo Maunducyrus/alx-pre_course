@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@craco/craco": "^7.1.0",
     "adminbsb-materialdesign": "^1.0.7",
     "axios": "^1.7.9",
     "cra-template": "1.2.0",
