@@ -13,19 +13,21 @@ import AuthHandler from "./AuthHandler";
 //         />
 //     );
 // }
-export var PrivateRoute = ({ component: Component, ...rest }) => {
-    console.log({ ...rest });
-    console.log(rest);
-    return (
-        <Route
-            {...rest}
-            element={
-                AuthHandler.loggedIn() 
-                    ? <Component {...rest} /> 
-                    : <Navigate to="/" />
-            }
-        />
-    );
-};
 
-export default PrivateRoute;
+
+// export var PrivateRoute = ({ component: Component, ...rest }) => {
+//     console.log({ ...rest });
+//     console.log(rest);
+//     return (
+//         <Route
+//             {...rest}
+//             element={
+//                 AuthHandler.loggedIn() 
+//                     ? <Component {...rest} /> 
+//                     : <Navigate to="/" />
+//             }
+//         />
+//     );
+// };
+
+// export default PrivateRoute;
