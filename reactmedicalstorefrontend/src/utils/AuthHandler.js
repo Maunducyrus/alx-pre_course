@@ -5,6 +5,7 @@ import { reactLocalStorage } from 'reactjs-localstorage';
 
 class AuthHandler{
     static login (username, password, callback){
+        // axios.post(config.loginUrl, {username:username, password:password })
         axios.post(config.loginUrl, {username:username, password:password })
         .then(function(response){
             // console.log(response);

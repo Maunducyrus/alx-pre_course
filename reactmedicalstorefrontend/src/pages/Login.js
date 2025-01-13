@@ -8,18 +8,19 @@ import GoogleFontLoader from 'react-google-font-loader';
 import AuthHandler from '../utils/AuthHandler';
 import config from '../utils/Config';
 import { Navigate } from 'react-router-dom';
+import { reactLocalStorage } from 'reactjs-localstorage';
 
 
 
 
 class Login extends React.Component {
-    constructor(props) {
-        super(props);
+    // constructor(props) {
+    //     super(props);
 
         // Bind methods to 'this'
-        this.saveInputs = this.saveInputs.bind(this);
-        this.formSubmit = this.formSubmit.bind(this);
-    }
+    //     this.saveInputs = this.saveInputs.bind(this);
+    //     this.formSubmit = this.formSubmit.bind(this);
+    // }
 
     state = {
         username: "",
@@ -36,7 +37,7 @@ class Login extends React.Component {
         else {
             this.setState({btnDisabled: true});
         }
-    }
+    };
     // saveInputs(event) {
     //     const key = event.target.name;
     //     const value = event.target.value;
@@ -51,8 +52,6 @@ class Login extends React.Component {
         event.preventDefault();
         console.log(this.state);
         this.setState({loginStatus: 1}); // For demonstration purposes, simulating an asynchronous request.
-
-
         AuthHandler.login(
             this.state.username,
             this.state.password,
@@ -64,17 +63,17 @@ class Login extends React.Component {
         console.log(data);
         if(data.error){
             this.setState({loginStatus: 4}); // Simulating an error response.
-            this.setState({ loginStatus: 4 });
+            // this.setState({ loginStatus: 4 });
         }
         else{
             this.setState({loginStatus:3}); //successful response
-            this.setState({ loginStatus: 3 });
+            // this.setState({ loginStatus: 3 });
             window.location = config.homeUrl;
         }
-    }
+    };
 
     getMessage=() =>{
-        if(this.state.loginStatus===0){
+        if(this.state.loginStatus === 0){
             return "";
         }
         // else if(this.state.loginStatus=== 1){
@@ -182,8 +181,8 @@ class Login extends React.Component {
                                     <div className="col-xs-6 align-right">
                                         <a href="forgot-password.html">Forgot Password?</a>
                                     </div>
+                                    <div className="col-xs-12"> {this.getMessage()}</div>
                                 </div>
-                                {this.getMessage()}
                             </form>
                         </div>
                     </div>
