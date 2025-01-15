@@ -48,7 +48,7 @@ class Login extends React.Component {
     //     });
     // }
 
-    formSubmit(event) {
+    formSubmit = (event) => {
         event.preventDefault();
         console.log(this.state);
         this.setState({loginStatus: 1}); // For demonstration purposes, simulating an asynchronous request.
@@ -154,7 +154,7 @@ class Login extends React.Component {
                                     <div className="form-line">
                                         <input 
                                         type="password" 
-                                        class="form-control" 
+                                        className="form-control" 
                                         name="password" 
                                         placeholder="Password" 
                                         required 
