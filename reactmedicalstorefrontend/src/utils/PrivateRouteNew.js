@@ -15,7 +15,8 @@ import MainComponent from "../components/MainComponent"
 // }
 export var PrivateRouteNew = ({ page, activepage, ...rest }) => {
     return (
-       
+        <Router>
+       <Routes>
         <Route
             {...rest}
             element={
@@ -24,6 +25,8 @@ export var PrivateRouteNew = ({ page, activepage, ...rest }) => {
                     : <Navigate to="/" />
             }
         />
+    </Routes>
+    </Router>
        
     );
 };
