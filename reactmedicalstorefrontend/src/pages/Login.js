@@ -96,12 +96,12 @@ class Login extends React.Component {
                 </div>
             );
         }
-    }
+    };
     render() {
         if (AuthHandler.loggedIn()){
             return <Navigate to = {config.homeUrl} />;
         }
-        document.body.className = 'login-page'
+        document.body.className = "login-page";
 
         return (
                 <React.Fragment>
@@ -118,8 +118,8 @@ class Login extends React.Component {
                 <GoogleFontLoader
                 fonts={[
                     {
-                    font: 'Material+Icons'            
-                    } 
+                    font: 'Material+Icons',          
+                    },
                 ]}
                 />
 
@@ -130,7 +130,7 @@ class Login extends React.Component {
                     </div>
                     <div className="card">
                         <div className="body">
-                            <form id="sign_in" method="POST" onSubmit={this.formSubmit} novalidate="novalidate">
+                            <form id="sign_in" method="POST" onSubmit={this.formSubmit}>
                                 <div className="msg">Sign in to start your session</div>
                                 <div className="input-group">
                                     <span className="input-group-addon">
