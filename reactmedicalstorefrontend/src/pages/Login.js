@@ -28,6 +28,8 @@ class Login extends React.Component {
         btnDisabled: true,
         loginStatus: 0,
     }
+    }
+
     saveInputs(event) {
         var key=event.target.name;
         this.setState({[key]: event.target.value});
