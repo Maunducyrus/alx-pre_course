@@ -131,7 +131,7 @@ class Login extends React.Component {
                     <div className="card">
                         <div className="body">
                             <form id="sign_in" method="POST" onSubmit={this.formSubmit}>
-                                <div className="msg">Sign in to start your session</div>
+                                <div className="msg">Sign in</div>
                                 <div className="input-group">
                                     <span className="input-group-addon">
                                         <i className="material-icons">person</i>
@@ -142,7 +142,7 @@ class Login extends React.Component {
                                         className="form-control" 
                                         name="username" 
                                         placeholder="Username" 
-                                        required="" 
+                                        required
                                         autofocus 
                                         onChange={this.saveInputs}
 
@@ -183,14 +183,14 @@ class Login extends React.Component {
                                     <div className="col-xs-6 align-right">
                                         <a href="forgot-password.html">Forgot Password?</a>
                                     </div>
-                                    <div className="col-xs-12"> {this.getMessage()}</div>
+                                    <div className="col-xs-12"> {this.getMessages()}</div>
                                 </div>
                             </form>
                         </div>
                     </div>
                 </div>
                 </React.Fragment>
-        )
+        );
     }
 
 }
