@@ -52,7 +52,7 @@ class Login extends React.Component {
     formSubmit = (event) => {
         event.preventDefault();
         console.log(this.state);
-        this.setState({loginStatus: 1}); // For demonstration purposes, simulating an asynchronous request.
+        this.setState({ loginStatus: 1}); // For demonstration purposes, simulating an asynchronous request.
         AuthHandler.login(
             this.state.username,
             this.state.password,
@@ -60,7 +60,7 @@ class Login extends React.Component {
         );
     };
 
-    handleAjaxResponse=(data) =>{
+    handleAjaxResponse = (data) => {
         console.log(data);
         if(data.error){
             this.setState({loginStatus: 4}); // Simulating an error response.
@@ -73,8 +73,8 @@ class Login extends React.Component {
         }
     };
 
-    getMessage=() =>{
-        if(this.state.loginStatus === 0){
+    getMessages = () =>{
+        if (this.state.loginStatus === 0){
             return "";
         }
         // else if(this.state.loginStatus=== 1){
@@ -92,7 +92,8 @@ class Login extends React.Component {
         else if(this.state.loginStatus=== 4){
             return (
                 <div class="alert alert-danger">
-            <strong>Invalid Login Details</strong> </div>
+            <strong>Invalid Login Details</strong> 
+                </div>
             );
         }
     }
