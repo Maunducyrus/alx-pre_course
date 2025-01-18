@@ -8,21 +8,14 @@ import GoogleFontLoader from 'react-google-font-loader';
 import "adminbsb-materialdesign/css/themes/all-themes.css";
 
 class MainComponent extends Component {
-    // constructor(props) {
-    //     super(props);
-    //     this.state = {
-    //         bodyClass: "theme-red ls-closed",
-    //         displayOverlay: "none",
-    //         width: window.innerWidth,
-    //     };
-    // }
-    state = {
-        bodyClass: "theme-red ls-closed",
-        displayOverlay: "none",
-        width: window.screen.width,
-      };
-
-
+    constructor(props) {
+        super(props);
+        this.state = {
+            bodyClass: "theme-red ls-closed",
+            displayOverlay: "none",
+            width: window.innerWidth,
+        };
+    }
 
     // componentDidMount() {
     //     window.addEventListener("resize", this.handleResize);
