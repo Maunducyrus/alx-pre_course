@@ -1,4 +1,5 @@
-// import React, { Component } from "react"; // Import Component
+import React, { Component } from "react"; // Import Component
+// import React from "react"
 import Overlay from "./Overlay"; // Import the Overlay component
 import Navbar from "./Navbar"; // Import the Navbar component
 import Sidebar from "./Sidebar"; // Import the Sidebar component
