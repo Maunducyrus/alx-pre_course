@@ -2,7 +2,7 @@ import React, { Component } from "react"; // Import Component
 import Overlay from "./Overlay"; // Import the Overlay component
 import Navbar from "./Navbar"; // Import the Navbar component
 import Sidebar from "./Sidebar"; // Import the Sidebar component
-// import HomeComponents from "./HomeComponents";
+import HomeComponents from "./HomeComponents";
 import GoogleFontLoader from 'react-google-font-loader';
 import "adminbsb-materialdesign/css/themes/all-themes.css";
 
